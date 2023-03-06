@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>admin login</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1 class="label">Admin-Login</h1>
+		<form class="login_form" action="http://127.0.0.1:5000/view" method="post" name="form" onsubmit="return validated()">
+			<div class="font">Username</div>
+			<input autocomplete="off" type="text" name="email">
+			<div id="email_error">Please fill up your username</div>
+			<div class="font font2">Password</div>
+			<input type="password" name="password">
+			<div id="pass_error">Please fill up your Password</div>
+			<button type="submit">Login</button>
+		</form>
+	</div>	
+	<script src="{{ url_for('static', filename='valid.js') }}"></script>
+</body>
+</html>
